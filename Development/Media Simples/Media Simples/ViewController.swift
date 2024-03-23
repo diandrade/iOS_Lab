@@ -28,7 +28,14 @@ class ViewController: UIViewController {
                     return
         }
         
-        let media = (nota1Double+nota2Double+nota3Double+nota4Double) / 4;
+        let notes = [nota1Double, nota2Double, nota3Double, nota4Double]
+        
+        var sum: Double = 0
+        
+        for note in notes {
+            sum = sum + note
+        }
+        let media = sum/Double(notes.count)
         
         if (media < 4) {
             
@@ -38,7 +45,7 @@ class ViewController: UIViewController {
             
         } else if (media == 5) {
             
-            avarage.text = "A média é \(media))"
+            avarage.text = "A média é \(media)"
             type.text = "O resultado está na média"
             result.text = "Você foi aprovado"
             

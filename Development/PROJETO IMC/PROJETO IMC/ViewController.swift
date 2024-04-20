@@ -1,56 +1,52 @@
 //
 //  ViewController.swift
-//  PROJETO IMC
+//  Projeto Imc
 //
-//  Created by iOSLab on 02/03/24.
+//  Created by iOSLab on 20/04/24.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var weight: UITextField! //peso
-    @IBOutlet weak var height: UITextField! //altura
-    @IBOutlet weak var result: UILabel! //resultado
+    @IBOutlet weak var heigth: UITextField!
+    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var weigth: UITextField!
     
     
-    @IBAction func calc(_ sender: Any) {
+    @IBAction func calculate(_ sender: Any) {
         
-        guard let heightText = height.text else {
+        guard let weight = Double(weigth.text ?? ""),
+              let height = Double(heigth.text ?? "") else {
+            //
             return
         }
         
-        guard let widthText: String = weight.text else {
-            return
+        let imc = weight/(height*height)
+        result.text = "O seu IMC é \(String(format:"%.2f", imc))"
+        
+        var categoryResult: String? {
+            switch imc {
+            case ..<16.9:
+                return "Muito abaixo do peso."
+            case 17...18.4:
+                return "Abaixo do peso."
+            case 18.5...24.9:
+                return "Peso normal."
+            case 25...29.9:
+                return "Acima do peso."
+            case 30...34.9:
+                return "Obesidade grau I."
+            case 35...40:
+                return "Obesidade grau II."
+            case 40...:
+                return "Obesidade grau III"
+            default:
+                return nil
+            }
         }
         
-        guard let height: Double = Double(heightText) else {
-            return
-        }
-        guard let width: Double = Double(widthText) else {
-            return
-        }
-        
-        let imc = width / (height * height)
-        
-        
-        
-        result.text = "O resultado é \(imc))"
+        category.text = categoryResult ?? ""
     }
-    
-    /*let name: String? = nil
-     
-     func guardLet() {
-         guard let nameGuardWrap = name else {
-             return
-         }
-         print(nameGuardWrap)*/
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
 }
 

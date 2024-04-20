@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  PROJETO IMC
+//  Projeto Imc
 //
-//  Created by iOSLab on 02/03/24.
+//  Created by iOSLab on 20/04/24.
 //
 
 import UIKit

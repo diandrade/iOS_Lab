@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06044BB82BDD828000D07928 /* Ages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06044BB72BDD828000D07928 /* Ages.swift */; };
 		068AA55F2BD43D4E001D88C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068AA55E2BD43D4E001D88C5 /* AppDelegate.swift */; };
 		068AA5612BD43D4E001D88C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068AA5602BD43D4E001D88C5 /* SceneDelegate.swift */; };
 		068AA5632BD43D4E001D88C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068AA5622BD43D4E001D88C5 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06044BB72BDD828000D07928 /* Ages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ages.swift; sourceTree = "<group>"; };
 		068AA55B2BD43D4E001D88C5 /* Faixa de Idade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Faixa de Idade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		068AA55E2BD43D4E001D88C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		068AA5602BD43D4E001D88C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +61,10 @@
 				068AA55E2BD43D4E001D88C5 /* AppDelegate.swift */,
 				068AA5602BD43D4E001D88C5 /* SceneDelegate.swift */,
 				068AA5622BD43D4E001D88C5 /* ViewController.swift */,
+				06044BB72BDD828000D07928 /* Ages.swift */,
 				068AA5642BD43D4E001D88C5 /* Main.storyboard */,
-				068AA5672BD43D50001D88C5 /* Assets.xcassets */,
 				068AA5692BD43D50001D88C5 /* LaunchScreen.storyboard */,
+				068AA5672BD43D50001D88C5 /* Assets.xcassets */,
 				068AA56C2BD43D50001D88C5 /* Info.plist */,
 			);
 			path = "Faixa de Idade";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				068AA5632BD43D4E001D88C5 /* ViewController.swift in Sources */,
+				06044BB82BDD828000D07928 /* Ages.swift in Sources */,
 				068AA55F2BD43D4E001D88C5 /* AppDelegate.swift in Sources */,
 				068AA5612BD43D4E001D88C5 /* SceneDelegate.swift in Sources */,
 			);

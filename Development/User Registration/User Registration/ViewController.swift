@@ -8,12 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var users: [String] = []
+    var users: [User] = []
     
-    
+    @IBOutlet weak var birthdayInput: UITextField!
+    @IBOutlet weak var genderInput: UISegmentedControl!
     @IBOutlet weak var nameInput: UITextField!
-    
-    @IBOutlet weak var nameOutput: UITextView!
+    @IBOutlet weak var resultOutput: UITextView!
     
     private func renderError() {
             let alert = UIAlertController(title: "Alert", message: "Ocorreu um erro, tente novamente.", preferredStyle: UIAlertController.Style.alert)
@@ -23,28 +23,30 @@ class ViewController: UIViewController {
     
     func renderUI() {
         var outputText = ""
-        for (index,user) in users.enumerated(){
-            outputText += "\(index + 1). \(user)\n"
+        for (index, user) in users.enumerated() {
+            guard let age = user.age else {
+                renderError()
+                return
+            }
+            
+            outputText += "\(index + 1). \(user.name) é \(user.gender.rawValue.lowercased()) e tem \(age) anos\n"
         }
-        nameOutput.text = outputText
+        resultOutput.text = outputText
     }
     
     @IBAction func addButton(_ sender: Any) {
-        guard let user = nameInput.text,
-              !user.isEmpty
-                else {
+       guard let name = nameInput.text,
+             let birthday = birthdayInput.text,
+             let genderTitle = genderInput.titleForSegment(at: genderInput.selectedSegmentIndex),
+             let gender = Gender(rawValue: genderTitle),
+             !name.isEmpty else {
             renderError()
             return
         }
+        let user = User(name: name, gender: gender, birthdayDate: birthday)
         users.append(user)
         renderUI()
         nameInput.text = ""
-    }
-    
-    //Default
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }
 

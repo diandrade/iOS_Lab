@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  User Register
+//  UserRegisters
 //
-//  Created by iOSLab on 18/05/24.
+//  Created by iOS Lab on 04/05/24.
 //
 
 import UIKit

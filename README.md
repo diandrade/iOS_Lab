@@ -1,4 +1,4 @@
-### iOS Lab Course Projects
+# iOS Lab Course Projects
 
 These projects were developed as part of the **iOS Lab** course, where I explored core iOS development concepts. Below are the topics covered and the corresponding projects:
 
